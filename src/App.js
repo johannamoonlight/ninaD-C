@@ -1,16 +1,28 @@
 
-import './App.css';
-import {Navbar} from "./componentes/Navbar";
-import {ItemListContainer} from "./componentes/itemListContainer"
+import {fragment,useState} from "React";
 
 
-function App() {
+
+function App () {
+
+const  [number, setNumber]= useState (10)
+
+const incrementar = () => { 
+  setNumber(number + 1)
+}
+
+const disminuir = () => {
+  setNumber(number-1)
+}
+
+
+
   return (
-    <>
-    <Navbar/>
-    <ItemListContainer greeting ={"Hola mundo"}/> 
-    </>
-  );
+    <fragment>
+      <button onClick ={onClick}></button>
+    </fragment>
+
+  )
 }
 
 export default App;
