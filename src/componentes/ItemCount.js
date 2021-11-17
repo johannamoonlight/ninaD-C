@@ -1,17 +1,18 @@
-import React from "React"
-import { useState } from "react"
+import React, { useState } from "react";
 
-function ItemCount () {
-    const [number, setNumber]= useState(10)
 
-    const agregar = () =>{
-        setNumber (number+1)
-    }
+function ItemCount({ stock }) {
 
-    const restar = () => {
-        setNumber (number -1)
-    }
+    const [number, setNumber] = useState(1);
 
+    const agregar = () => {
+        setNumber(number + 1);
+};
+const restar = () => {
+    setNumber(number - 1);
+};
+
+    
     return (
         <fragment >
         <button  onClick = {agregar}> + </button>  

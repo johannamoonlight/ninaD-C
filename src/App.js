@@ -1,28 +1,20 @@
 
-import {fragment,useState} from "React";
+import React from "react";
+
+import { Navbar } from "./componentes/Navbar";
+
+import ItemCount from "./componentes/ItemCount";
 
 
-
-function App () {
-
-const  [number, setNumber]= useState (10)
-
-const incrementar = () => { 
-  setNumber(number + 1)
-}
-
-const disminuir = () => {
-  setNumber(number-1)
-}
-
-
-
+function App() {
   return (
-    <fragment>
-      <button onClick ={onClick}></button>
-    </fragment>
+     <>
+        <Navbar />
 
-  )
+        {}
+        <ItemCount stock={10} />
+     </>
+  );
 }
 
 export default App;
