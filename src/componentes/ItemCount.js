@@ -3,25 +3,23 @@ import React, { useState } from "react";
 
 function ItemCount({ stock }) {
 
-    const [number, setNumber] = useState(1);
+    const [count, setCount] = useState(1);
 
     const agregar = () => {
-        setNumber(number + 1);
-};
+    count <stock && setCount(count + 1);
+    };
+
 const restar = () => {
-    setNumber(number - 1);
+    1 < count && setCount(count - 1);
 };
-
-    
-    return (
-        <fragment >
-        <button  onClick = {agregar}> + </button>  
-        <h1>{number} </h1>
-        <button onClick= {restar}> - </button>
-
-
-        </fragment>
-    )
-
+return (
+<>
+    <button onClick={agregar}> + </button>
+    <h1>{count} </h1>
+    <button onClick={restar}> - </button>
+</>
+);
 }
-export default  ItemCount
+export default ItemCount; 
+
+
