@@ -7,14 +7,14 @@ import ItemCount from "./componentes/ItemCount";
 
 
 function App() {
-  return (
-     <>
-        <Navbar />
+return (
+<>
+   <Navbar />
 
-        {}
-        <ItemCount stock={10} />
-     </>
-  );
+{}
+<ItemCount stock={10} />
+</>
+);
 }
 
 export default App;
