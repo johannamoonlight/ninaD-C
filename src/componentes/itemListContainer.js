@@ -1,11 +1,22 @@
 import { useEffect, useState } from "react"
 import { somethingWillhappen } from "./promises";
 import { ItemList} from "./ItemList";
-export const ItemListContainer = ({greeting}) => {
-const [items, setItems] = useState([])  
+import{useParams} from "react-router-dom";
 
-somethingWillhappen().then(resultado => setItems(resultado)) 
- 
+export const ItemListContainer = ({greeting}) => {
+    const [items, setItems] = useState ([])
+    const {catId} = useParams ();
+
+useEffect(() => {
+
+somethingWillhappen().then(resultado =>
+    catId ? setItems(resultado.filter(item => item.category === catId))
+    :
+    setItems(resultado)
+
+)
+},[catId])
+
     return  <ItemList items={items}/>
 
 };

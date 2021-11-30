@@ -1,21 +1,21 @@
 
 import React from "react";
-import { ItemListContainer } from "./componentes/itemListContainer";
+import { ItemListContainer } from "./componentes/ItemListContainer";
 import { Navbar } from "./componentes/Navbar";
-
-import ItemCount from "./componentes/ItemCount";
-
-import diseño from "./componentes/diseño";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import "./componentes/Diseño.css";
 
 
 function App() {
-return (
-<>
+   return (
+   <BrowserRouter>
    <Navbar />
 
-{}
-<ItemListContainer/>
-</>
+   <Routes>
+   <Route path= "/" element ={<ItemListContainer /> } />
+   <Route path= "/category/:catId" element= {<ItemListContainer /> } />
+   </Routes>
+</BrowserRouter>
 );
 }
 

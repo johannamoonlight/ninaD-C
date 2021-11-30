@@ -1,12 +1,13 @@
 import React from "react"
 import { CartWidget } from "./cartWidget";
+import {Link} from `react-router-dom`
 
 export const Navbar = () => {
     return (
     <nav className="lasclases" style= { {background: "violet"}}>
-        <a href="/">Buzito</a>
-        <a href="/">Correas</a>
-        <a href="/">Collares</a>
+        <Link to="/category/accesorios">Accesorios</Link>
+        <Link to="/category/abrigos">Abrigos</Link>
+        <Link to="/category/pipetas">Pipetas</Link>
         <CartWidget/> 
         
     </nav>
