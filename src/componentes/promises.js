@@ -4,21 +4,21 @@ const products =[
         color: `red`,
         id:1,  
         imagen:`imagenes/correas.jpg`,
-        category:"Accesorios"
+        category:"accesorios"
     },
     { 
         product1:`Abrigos`,
         color: `blue`,
         id:2,
         imagen:`imagenes/buzitogato.jpg`,
-        category:"Abrigos"
+        category:"abrigos"
     },
     {  
         product1:`Pipeta`,
         color: `white`,
         id:3, 
         imagen:`imagenes/pipeta.png`,
-        category:"Pipetas"
+        category:"pipetas"
     },    
     ] 
 

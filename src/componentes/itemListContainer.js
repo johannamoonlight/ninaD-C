@@ -8,15 +8,17 @@ export const ItemListContainer = ({greeting}) => {
     const {catId} = useParams ();
 
 useEffect(() => {
-
-somethingWillhappen().then(resultado =>
+    setLoading (true)
+    somethingWillhappen().then(resultado =>
     catId ? setItems(resultado.filter(item => item.category === catId))
     :
     setItems(resultado)
+    )
+    .finally(() => setLoading (false))
 
-)
+
 },[catId])
 
-    return  <ItemList items={items}/>
+    return loading ? <h1> CARGANDO...</h1>: <ItemList items={items}/>
 
 };

@@ -4,7 +4,7 @@ import { ItemDetail} from "./ItemDetail";
 import{useParams} from "react-router-dom";
 
 export const ItemDetailContainer = () => {
-    const [item, setItems] = useState ({})
+    const [item, setItem] = useState ({})
     const [loading,setLoading] =useState(true)
     const {itemId} = useParams ();
 
@@ -13,7 +13,7 @@ useEffect(() => {
 
 somethingWillhappen().then(resultado =>
     itemId && setItems(resultado.find(item => item.id === itemId))
-    ).finally (()=> setLoading(false))
+    ).finally(()=> setLoading(false))
 
 },  [itemId])
 
