@@ -4,15 +4,15 @@ import { ItemList} from "./ItemList";
 import{useParams} from "react-router-dom";
 
 export const ItemListContainer = ({greeting}) => {
-    const [items, setItems] = useState ([])
+    const [items, setItem] = useState ([])
     const {catId} = useParams ();
-
+    const [loading,setLoading] =useState(true)
 useEffect(() => {
     setLoading (true)
     somethingWillhappen().then(resultado =>
-    catId ? setItems(resultado.filter(item => item.category === catId))
+    catId ? setItem(resultado.filter(item => item.category === catId))
     :
-    setItems(resultado)
+    setItem(resultado)
     )
     .finally(() => setLoading (false))
 

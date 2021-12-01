@@ -12,7 +12,7 @@ useEffect(() => {
     setLoading(true)
 
 somethingWillhappen().then(resultado =>
-    itemId && setItems(resultado.find(item => item.id === itemId))
+    itemId && setItem(resultado.find(item => item.id === itemId))
     ).finally(()=> setLoading(false))
 
 },  [itemId])
