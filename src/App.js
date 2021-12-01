@@ -5,7 +5,7 @@ import { ItemListContainer } from "./componentes/itemListContainer";
 import { Navbar } from "./componentes/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {ItemDetailContainer} from './componentes/ItemDetailContainer';
-import "./componentes/diseño.css";
+import "./componentes/Diseño.css";
 
 function App() {
    return (
