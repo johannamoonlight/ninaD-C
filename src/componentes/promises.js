@@ -4,21 +4,26 @@ const products =[
         color: `red`,
         id:"1",  
         imagen:`/imagenes/correas.jpg`,
-        category:"accesorios"
+        category:"accesorios",
+        precio: 500
     },
     { 
         product1:`Abrigos`,
         color: `blue`,
         id:"2",
         imagen:`/imagenes/buzitogato.jpg`,
-        category:"abrigos"
+        category:"abrigos",
+        precio: 600,
+
     },
     {  
         product1:`Pipeta`,
         color: `white`,
         id:"3", 
         imagen:`/imagenes/pipeta.png`,
-        category:"pipetas"
+        category:"pipetas",
+        precio: 300,
+
     },    
     ] 
 export const somethingWillhappen = () => {

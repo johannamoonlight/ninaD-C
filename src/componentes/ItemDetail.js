@@ -1,15 +1,17 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
 import ItemCount from "./ItemCount"
-import { Link } from "react-router-dom"
+import { CartContext} from "../context/CartContext"
 
 export const ItemDetail = ({ item }) => {
 
 
     const [compraHecha,setCompraHecha] = useState(false)
+    useContext(addToCart) = useContext (CartContext)
 
     const onAdd = (contador) => {
         console.log(contador)
+        addToCart (item, contador)
         setCompraHecha(true)
 
     }
@@ -19,10 +21,10 @@ export const ItemDetail = ({ item }) => {
         <h2> {item.color}    </h2>
         <img src={item.imagen} alt={item.product1} style={{ height: "600px", width: "800px" }} />
 
-        {compraHecha :
+        {compraHecha ? 
         <div><Link to="/cart">Terminar compra </Link>
         </div>
-        ?
+       :
         <div> 
         <ItemCount  stock ={10}   onAdd ={onAdd}/>
         </div>

@@ -9,6 +9,7 @@ import "./componentes/Diseño.css";
 
 function App() {
    return (
+      <CartProvider>
       <BrowserRouter>
          <Navbar />
 
@@ -19,6 +20,7 @@ function App() {
          </Routes>
 
       </BrowserRouter>
+      </CartProvider>
    );
 }
 

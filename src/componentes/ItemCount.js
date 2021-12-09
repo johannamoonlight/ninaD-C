@@ -17,7 +17,7 @@ return (
     <button onClick={agregar}> + </button>
     <h1>{count} </h1>
     <button onClick={restar}> - </button>
-    <buton onClick= {()=> onAdd(count)}> Agregar al carrito </buton>
+    <button onClick= {()=> onAdd(count)}> Agregar al carrito </button>
 </>
 );
 }
