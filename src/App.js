@@ -6,7 +6,7 @@ import { Navbar } from "./componentes/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {ItemDetailContainer} from './componentes/ItemDetailContainer';
 import "./componentes/Diseño.css";
-import { CartProvider} from "./componentes/CartView"
+import { CartView} from "./componentes/CartView"
 import { CartProvider } from './componentes/CartContext'
 
 function App() {

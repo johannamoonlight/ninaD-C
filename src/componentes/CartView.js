@@ -1,20 +1,11 @@
-import React from { UseContext } "react"
-import {CartContext } from "../context/CartContext"
+import React, { useContext } from 'react'
+import { CartContext } from "./CartContext"
 
 export const CartView = () => {
     const {cart } = useContext (CartContext)
     console.log ("En el carrito", cart)
 
-    /*
-    cantidad : 7
-
-    item:
-    category:"red"
-    id: "1"
-    imagen: "/imagenes/correas.jpg"
-    product1: "accesorios"
-    precio: 500
-    */
+  
 
     return <>
     {cart.map(i => {
@@ -25,10 +16,12 @@ export const CartView = () => {
         <h2>Cantidad: {i.cantidad}</h2>
         <h2>SubTotal:{i.cantidad = i.item.precio} </h2>
         <img src ={i.item.imagen} alt = {i.item.product1} style ={{height: "50px", width:"50px"}}/>
+        <button>Eliminar producto</button>
     
     </>
     }
     )}
+    <h2>TOTAL: </h2>
     </>
 }
 
