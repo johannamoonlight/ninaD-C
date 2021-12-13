@@ -8,6 +8,7 @@ export const ItemListContainer = ({greeting}) => {
     const {catId} = useParams ();
     const [loading,setLoading] =useState(true)
     
+    
 useEffect(() => {
     setLoading (true)
     somethingWillhappen().then(resultado =>
